@@ -19,8 +19,28 @@ const { title } = Astro.props;
   </head>
   <body>
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
+  <footer>
+    <div class="wrapper">
+      <div class="left-box">
+        <p>Storygenie - 2023</p>
+        <div class="links">
+          <a href="/terms">Terms</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/disclaimer">Disclaimer</a>
+        </div>
+      </div>
+      <p>
+        made with
+        <a href="https://astro.build/" class="underline hover:text-green-400">
+          Astro
+        </a>
+      </p>
+    </div>
+  </footer>
 </html>
 <style is:global lang="scss">
   :root {
@@ -40,6 +60,16 @@ const { title } = Astro.props;
     background-size: 224px;
     color: white;
   }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
@@ -58,6 +88,7 @@ const { title } = Astro.props;
     font-weight: 600;
     word-wrap: break-word;
     text-align: center;
+    margin-top: 0;
   }
   .text-large {
     font-size: 18px;
@@ -77,6 +108,39 @@ const { title } = Astro.props;
       display: block;
       text-align: center;
       color: #f59e0b;
+    }
+  }
+
+  footer {
+    background-color: #1f2937;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #64748b;
+
+    .wrapper {
+      margin: 0 auto;
+      max-width: 1500px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .left-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .links {
+          display: flex;
+          flex-direction: row;
+          gap: 0.5rem;
+          a {
+            color: #64748b;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
     }
   }
 </style>

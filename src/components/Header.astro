@@ -1,25 +1,24 @@
 <div class="header">
-  <a href="/" }>
+  <a href="/">
     <h2 class="logo-text">Storygenie</h2>
   </a>
-  <!-- Will have Features, Company, Pricing -->
   <nav>
     <ul class="header__links">
-      <li>
-        <a href="/features">Features</a>
-      </li>
-      <li>
-        <a href="/company">Company</a>
-      </li>
-      <li>
-        <a href="/pricing">Pricing</a>
-      </li>
-      <li class="secondary-button-inverted">
-        <a href="/login">Login</a>
-      </li>
-      <li class="primary-button">
-        <a href="/signup">Sign Up</a>
-      </li>
+      <div class="header__links-subsites">
+        <li>
+          <a href="/features">Features</a>
+        </li>
+        <li>
+          <a href="/company">Company</a>
+        </li>
+        <li>
+          <a href="/pricing">Pricing</a>
+        </li>
+      </div>
+      <div class="header__links-auth">
+        <a class="secondary-button--inverted" href="/login">Login</a>
+        <a class="primary-button" href="/signup">Sign Up</a>
+      </div>
     </ul>
   </nav>
 </div>
@@ -29,26 +28,24 @@
     justify-content: space-between;
     &__links {
       display: flex;
-      align-items: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li {
-        margin-left: 1rem;
-        a {
-          color: #fff;
-          text-decoration: none;
-          &:hover {
-            color: #ccc;
-          }
+      gap: 2rem;
+      &-subsites,
+      &-auth {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+        li {
+          margin-left: 1rem;
         }
       }
     }
   }
   .logo-text {
     color: #fff;
-    font-family: Roboto;
-    font-size: 16px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

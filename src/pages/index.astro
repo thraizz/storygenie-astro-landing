@@ -7,18 +7,18 @@ import Prices from "../components/Prices.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
+<Layout title="Storygenie - The smarter way to write stories.">
+  <div class="landing-layout">
     <LandingHero />
     <Features />
     <Prices />
     <FAQ />
     <Contact />
-  </main>
+  </div>
 </Layout>
 
 <style lang="scss">
-  main {
+  .landing-layout {
     display: flex;
     padding: 128px;
     flex-direction: column;
@@ -56,6 +56,26 @@ import Layout from "../layouts/Layout.astro";
     border-radius: 4px;
     background: #6366f1;
     color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .secondary-button:hover {
+    background: rgb(100 103 241);
+  }
+  .secondary-button--inverted {
+    a {
+      color: #6366f1;
+    }
+    border: 1px solid #6366f1;
+    transition: background 0.2s ease-in-out;
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
     text-align: center;
     font-size: 16px;
     font-style: normal;
