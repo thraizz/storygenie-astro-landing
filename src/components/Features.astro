@@ -1,0 +1,143 @@
+---
+import StoryCard from "./StoryCard.astro";
+---
+
+<div>
+  <h2>Features</h2>
+  <div class="feature-cards">
+    <div class="feature-cards__card text-right">
+      <div class="idea-to-story">
+        <span class="text-large">
+          “Create a list of received user feedback and integrate some sort of
+          dashboard to have a better overview”
+        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="49"
+          height="48"
+          viewBox="0 0 49 48"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M43.875 24C43.875 13.23 35.145 4.5 24.375 4.5C13.605 4.5 4.875 13.23 4.875 24C4.875 34.77 13.605 43.5 24.375 43.5C35.145 43.5 43.875 34.77 43.875 24ZM23.315 32.56C23.5963 32.8409 23.9775 32.9987 24.375 32.9987C24.7725 32.9987 25.1537 32.8409 25.435 32.56L31.435 26.56C31.5824 26.4227 31.7006 26.2571 31.7826 26.0731C31.8645 25.8891 31.9086 25.6905 31.9122 25.489C31.9157 25.2876 31.8787 25.0876 31.8032 24.9008C31.7278 24.714 31.6155 24.5444 31.4731 24.4019C31.3306 24.2595 31.161 24.1472 30.9742 24.0718C30.7874 23.9963 30.5874 23.9593 30.386 23.9628C30.1846 23.9664 29.9859 24.0105 29.8019 24.0924C29.6179 24.1744 29.4523 24.2926 29.315 24.44L25.875 27.88V16.5C25.875 16.1022 25.717 15.7206 25.4357 15.4393C25.1544 15.158 24.7728 15 24.375 15C23.9772 15 23.5956 15.158 23.3143 15.4393C23.033 15.7206 22.875 16.1022 22.875 16.5V27.88L19.435 24.44C19.2977 24.2926 19.1321 24.1744 18.9481 24.0924C18.7641 24.0105 18.5655 23.9664 18.364 23.9628C18.1626 23.9593 17.9626 23.9963 17.7758 24.0718C17.589 24.1472 17.4194 24.2595 17.2769 24.4019C17.1345 24.5444 17.0222 24.714 16.9468 24.9008C16.8713 25.0876 16.8343 25.2876 16.8378 25.489C16.8414 25.6905 16.8855 25.8891 16.9674 26.0731C17.0494 26.2571 17.1676 26.4227 17.315 26.56L23.315 32.56Z"
+            fill="white"></path>
+        </svg>
+        <StoryCard />
+      </div>
+      <div class="feature-cards__card__content">
+        <h3>Generate</h3>
+        <p class="text-large">Harness the power of latest AI technology.</p>
+        <p>
+          Save time and jump-start your writing with Storygenie's OpenAI-powered
+          story generation. It will allow you to generate rich and comprehensive
+          scrum stories.
+        </p>
+        <div class="primary-button--outlined">
+          <a href="#"> Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="feature-cards__card text-left">
+      <div class="feature-cards__card__content">
+        <h3>Collaborate</h3>
+        <p class="text-large">Writing stories together shouldn't be a drag.</p>
+        <p>
+          Storygenie empowers your team to write backlog items together with our
+          live multiplayer editor. Seamlessly collaborate, brainstorm ideas, and
+          refine in real-time, all within Storygenie.
+        </p>
+        <div class="primary-button--outlined">
+          <a href="#"> Learn more</a>
+        </div>
+      </div>
+      <div>Other side</div>
+    </div>
+    <div class="feature-cards__card text-right">
+      <div>Other side</div>
+      <div class="feature-cards__card__content">
+        <h3>Export</h3>
+        <p class="text-large">Different teams use different platforms.</p>
+        <p>
+          Send your stories where you need them with Storygenie's export
+          feature. Instantly export to popular issue trackers like Jira, GitLab,
+          and Linear, ensuring seamless synchronization across platforms.
+        </p>
+        <div class="primary-button--outlined">
+          <a href="#"> Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="feature-cards__card text-left">
+      <div class="feature-cards__card__content">
+        <h3>Analyze</h3>
+        <p class="text-large">Understand why stories performs good or bad.</p>
+        <p>
+          Storygenie delivers comprehensive metrics to improve your stories and
+          grow beyond your last sprint's story points.
+        </p>
+        <div class="primary-button--outlined">
+          <a href="#"> Learn more</a>
+        </div>
+      </div>
+      <div>Other side</div>
+    </div>
+  </div>
+</div>
+<style lang="scss">
+  .feature-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+    justify-content: space-between;
+    margin: 0 -1rem;
+    color: #fff;
+    &__card {
+      padding: 64px 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+
+      gap: 4rem;
+      box-shadow: 0px 5px 47px rgba(99, 102, 241, 0.5);
+      border-radius: 8px;
+
+      // Grainy, noisy gradient from left to right using svg turbulence
+      border-radius: 16px;
+      background: url("noiseTexture.png") repeat,
+        radial-gradient(85% 115% at 10% 5%, #6366f1 0%, #262e45 100%);
+      background-blend-mode: soft-light, soft-light, normal;
+      background-size: 40px, 100%;
+
+      &__content {
+        margin-top: 2rem;
+        h3 {
+          font-size: 3rem;
+          margin-top: 0;
+          margin-bottom: 1rem;
+        }
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+      &.text-right {
+        .feature-cards__card__content {
+          order: 1;
+        }
+      }
+      &.text-left {
+        .feature-cards__card__content {
+          order: -1;
+        }
+      }
+    }
+  }
+  .idea-to-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+</style>
