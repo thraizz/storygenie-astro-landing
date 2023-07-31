@@ -1,0 +1,66 @@
+---
+const { title, subtitle, description, linkTarget, isLeftText } = Astro.props;
+---
+
+<div class:list={["feature-card", isLeftText ? "text-left" : "text-right"]}>
+  <div class="feature-card__content">
+    <h3>{title}</h3>
+    <p class="text-large">{subtitle}</p>
+    <p>
+      {description}
+      <div style="margin-top: 1rem;" class="primary-button--outlined">
+        <a href={linkTarget}> Learn more</a>
+      </div>
+    </p>
+  </div>
+  <slot />
+</div>
+
+<style lang="scss">
+  .feature-card {
+    padding: 64px 64px;
+    display: grid;
+    // grid-template-columns: calc(50% - 4rem) calc(50% - 4rem);
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+    gap: 4rem;
+    // box-shadow: 0px 5px 47px rgba(99, 102, 241, 0.5);
+    border-radius: 8px;
+
+    // Grainy, noisy gradient from left to right using svg turbulence
+    border-radius: 16px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      h3 {
+        font-size: 3rem;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    &.text-right {
+      background: url("noiseTexture.png") repeat,
+        radial-gradient(85% 115% at 10% 5%, #6366f1 0%, #262e45 100%);
+      background-blend-mode: soft-light, soft-light, normal;
+      background-size: 100px, 100%;
+      .feature-card__content {
+        order: 1;
+      }
+    }
+    &.text-left {
+      background: url(noiseTexture.png) repeat,
+        radial-gradient(93% 100% at 82% 12%, #6366f1 0%, #262e45 100%);
+      background-blend-mode: soft-light, soft-light, normal;
+      background-size: 100px, 100%;
+      .feature-card__content {
+        order: -1;
+      }
+    }
+  }
+</style>

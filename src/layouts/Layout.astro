@@ -38,16 +38,24 @@ const { title } = Astro.props;
     font-family: system-ui, sans-serif;
     background: #13151a;
     background-size: 224px;
+    color: white;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
+  a {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   h2 {
     color: #f59e0b;
     font-size: 4rem;
-    font-family: Roboto;
-    font-weight: 700;
+    font-weight: 600;
     word-wrap: break-word;
     text-align: center;
   }

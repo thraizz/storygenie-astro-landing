@@ -1,11 +1,18 @@
 ---
+import FeatureCard from "./FeatureCard.astro";
 import StoryCard from "./StoryCard.astro";
 ---
 
 <div>
   <h2>Features</h2>
   <div class="feature-cards">
-    <div class="feature-cards__card text-right">
+    <FeatureCard
+      isLeftText={false}
+      title="Generate"
+      subtitle="Harness the power of latest AI technology."
+      description="Save time and jump-start your writing with Storygenie's OpenAI-powered story generation. It will allow you to generate rich and comprehensive scrum stories."
+      linkTarget="#"
+    >
       <div class="idea-to-story">
         <span class="text-large">
           “Create a list of received user feedback and integrate some sort of
@@ -26,63 +33,43 @@ import StoryCard from "./StoryCard.astro";
         </svg>
         <StoryCard />
       </div>
-      <div class="feature-cards__card__content">
-        <h3>Generate</h3>
-        <p class="text-large">Harness the power of latest AI technology.</p>
-        <p>
-          Save time and jump-start your writing with Storygenie's OpenAI-powered
-          story generation. It will allow you to generate rich and comprehensive
-          scrum stories.
-        </p>
-        <div class="primary-button--outlined">
-          <a href="#"> Learn more</a>
-        </div>
+    </FeatureCard>
+
+    <FeatureCard
+      isLeftText={true}
+      title="Collaborate"
+      subtitle="Writing stories together shouldn't be a drag."
+      description="Storygenie empowers your team to write backlog items together with our live multiplayer editor. Seamlessly collaborate, brainstorm ideas, and refine in real-time, all within Storygenie."
+      linkTarget="#"
+    >
+      <img style="width: 100%" src="collaborate-editor.svg" alt="Graph" />
+    </FeatureCard>
+
+    <FeatureCard
+      isLeftText={false}
+      title="Export"
+      subtitle="Different teams use different platforms."
+      description="Send your stories where you need them with Storygenie's export feature. Instantly export to popular issue trackers like Jira, GitLab, and Linear, ensuring seamless synchronization across platforms."
+      linkTarget="#"
+    >
+      <div class="feature-cards__export-logos">
+        <img src="jira-logo.png" alt="Jira" />
+        <img src="linear-logo.svg" alt="Linear" />
+        <img src="trello-logo.png" alt="Trello" />
+        <img src="github-logo.svg" alt="GitHub" />
+        <img src="gitlab-logo.svg" alt="GitLab" />
       </div>
-    </div>
-    <div class="feature-cards__card text-left">
-      <div class="feature-cards__card__content">
-        <h3>Collaborate</h3>
-        <p class="text-large">Writing stories together shouldn't be a drag.</p>
-        <p>
-          Storygenie empowers your team to write backlog items together with our
-          live multiplayer editor. Seamlessly collaborate, brainstorm ideas, and
-          refine in real-time, all within Storygenie.
-        </p>
-        <div class="primary-button--outlined">
-          <a href="#"> Learn more</a>
-        </div>
-      </div>
-      <div>Other side</div>
-    </div>
-    <div class="feature-cards__card text-right">
-      <div>Other side</div>
-      <div class="feature-cards__card__content">
-        <h3>Export</h3>
-        <p class="text-large">Different teams use different platforms.</p>
-        <p>
-          Send your stories where you need them with Storygenie's export
-          feature. Instantly export to popular issue trackers like Jira, GitLab,
-          and Linear, ensuring seamless synchronization across platforms.
-        </p>
-        <div class="primary-button--outlined">
-          <a href="#"> Learn more</a>
-        </div>
-      </div>
-    </div>
-    <div class="feature-cards__card text-left">
-      <div class="feature-cards__card__content">
-        <h3>Analyze</h3>
-        <p class="text-large">Understand why stories performs good or bad.</p>
-        <p>
-          Storygenie delivers comprehensive metrics to improve your stories and
-          grow beyond your last sprint's story points.
-        </p>
-        <div class="primary-button--outlined">
-          <a href="#"> Learn more</a>
-        </div>
-      </div>
-      <div>Other side</div>
-    </div>
+    </FeatureCard>
+
+    <FeatureCard
+      isLeftText={true}
+      title="Analyze"
+      subtitle="Understand why stories performs good or bad."
+      description="Storygenie delivers comprehensive metrics to improve your stories and grow beyond your last sprint's story points."
+      linkTarget="#"
+    >
+      <img style="width: 100%" src="graph.svg" alt="Graph" />
+    </FeatureCard>
   </div>
 </div>
 <style lang="scss">
@@ -93,44 +80,13 @@ import StoryCard from "./StoryCard.astro";
     justify-content: space-between;
     margin: 0 -1rem;
     color: #fff;
-    &__card {
-      padding: 64px 64px;
+    max-width: 1200px;
+    &__export-logos {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-content: center;
-      align-items: center;
-
-      gap: 4rem;
-      box-shadow: 0px 5px 47px rgba(99, 102, 241, 0.5);
-      border-radius: 8px;
-
-      // Grainy, noisy gradient from left to right using svg turbulence
-      border-radius: 16px;
-      background: url("noiseTexture.png") repeat,
-        radial-gradient(85% 115% at 10% 5%, #6366f1 0%, #262e45 100%);
-      background-blend-mode: soft-light, soft-light, normal;
-      background-size: 40px, 100%;
-
-      &__content {
-        margin-top: 2rem;
-        h3 {
-          font-size: 3rem;
-          margin-top: 0;
-          margin-bottom: 1rem;
-        }
-        p {
-          margin-bottom: 1rem;
-        }
-      }
-      &.text-right {
-        .feature-cards__card__content {
-          order: 1;
-        }
-      }
-      &.text-left {
-        .feature-cards__card__content {
-          order: -1;
-        }
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      img {
+        width: 100%;
       }
     }
   }
