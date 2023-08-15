@@ -51,7 +51,7 @@ const { tierName, price, description, features } = Astro.props;
     <div
       class=`${tierName === "Pro" ? "primary-button" :"primary-button--outlined"}`
     >
-      <a href="#">Get Started</a>
+      <slot />
     </div>
   </div>
 </div>
@@ -59,10 +59,10 @@ const { tierName, price, description, features } = Astro.props;
 <style lang="scss">
   .price-card {
     max-width: 320px;
-    color: #222;
+    color: white;
     padding: 2.5rem 2rem;
     border-radius: 8px;
-    background: #f5f5f5;
+    background: #252d43;
 
     display: grid;
     grid-template-rows: 140px auto;
@@ -71,12 +71,11 @@ const { tierName, price, description, features } = Astro.props;
 
     .tier-and-price {
       .tier {
-        color: #2e2041;
+        color: #f59e0b;
         font-size: 20px;
         font-weight: 600;
       }
       .price-and-month {
-        color: #000;
         display: flex;
         flex-direction: row;
         gap: 0.5rem;
@@ -92,7 +91,7 @@ const { tierName, price, description, features } = Astro.props;
       }
     }
     .description {
-      color: #787f8c;
+      color: #b6bbc4;
     }
 
     ul.features {
