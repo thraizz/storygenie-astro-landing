@@ -4,7 +4,7 @@ import StoryCard from "./StoryCard.astro";
 ---
 
 <div class="features">
-  <h2>Features</h2>
+  <h2 class="sr-only" id="features">Features</h2>
   <div class="feature-cards">
     <FeatureCard
       isLeftText={false}
@@ -81,6 +81,7 @@ import StoryCard from "./StoryCard.astro";
     margin: 0 -1rem;
     color: #fff;
     max-width: 1200px;
+    padding: 0 16px;
     &__export-logos {
       display: grid;
       grid-template-columns: repeat(5, 1fr);

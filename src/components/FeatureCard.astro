@@ -20,8 +20,9 @@ const { title, subtitle, description, linkTarget, isLeftText } = Astro.props;
   .feature-card {
     padding: 64px 64px;
     display: grid;
-    // grid-template-columns: calc(50% - 4rem) calc(50% - 4rem);
-    grid-template-columns: 1fr 1fr;
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
     justify-content: center;
     align-items: center;
 
@@ -29,7 +30,6 @@ const { title, subtitle, description, linkTarget, isLeftText } = Astro.props;
     // box-shadow: 0px 5px 47px rgba(99, 102, 241, 0.5);
     border-radius: 8px;
 
-    // Grainy, noisy gradient from left to right using svg turbulence
     border-radius: 16px;
 
     &__content {
@@ -49,8 +49,10 @@ const { title, subtitle, description, linkTarget, isLeftText } = Astro.props;
         radial-gradient(85% 115% at 10% 5%, #6366f1 0%, #262e45 100%);
       background-blend-mode: soft-light, soft-light, normal;
       background-size: 100px, 100%;
-      .feature-card__content {
-        order: 1;
+      @media screen and (min-width: 768px) {
+        .feature-card__content {
+          order: 1;
+        }
       }
     }
     &.text-left {
@@ -58,8 +60,10 @@ const { title, subtitle, description, linkTarget, isLeftText } = Astro.props;
         radial-gradient(93% 100% at 82% 12%, #6366f1 0%, #262e45 100%);
       background-blend-mode: soft-light, soft-light, normal;
       background-size: 100px, 100%;
-      .feature-card__content {
-        order: -1;
+      @media screen and (min-width: 768px) {
+        .feature-card__content {
+          order: -1;
+        }
       }
     }
   }
