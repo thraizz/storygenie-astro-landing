@@ -29,7 +29,9 @@
     gap: 128px;
     margin-bottom: 64px;
     &__content {
-      max-width: 80vw;
+      @media screen and (min-width: 768px) {
+        max-width: 768px;
+      }
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -44,13 +46,16 @@
   }
   h1 {
     text-align: center;
-    font-size: 4.5rem;
     font-weight: 700;
     line-height: normal;
     background: linear-gradient(164deg, #f5d49a 0%, #f59e0b 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    @media screen and (min-width: 768px) {
+      font-size: 4.5rem;
+    }
   }
   p {
     color: #fff;

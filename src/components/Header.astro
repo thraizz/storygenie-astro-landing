@@ -14,9 +14,9 @@
         <li>
           <a href="/#faq">FAQ</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="/#about">About us</a>
-        </li>
+        </li> -->
       </div>
       <div class="header__links-auth">
         <a
@@ -44,8 +44,11 @@
     &__links {
       display: flex;
       gap: 2rem;
+      padding-inline-start: 0;
+      padding-block-start: 0;
       &-subsites,
       &-auth {
+        white-space: nowrap;
         display: flex;
         align-items: center;
         list-style: none;
