@@ -76,12 +76,15 @@ import StoryCard from "./StoryCard.astro";
   .feature-cards {
     display: flex;
     flex-direction: column;
-    gap: 128px;
+    gap: 64px;
     justify-content: space-between;
     margin: 0 -1rem;
     color: #fff;
     max-width: 1200px;
     padding: 0 16px;
+    @media screen and (min-width: 768px) {
+      gap: 128px;
+    }
     &__export-logos {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
