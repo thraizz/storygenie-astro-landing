@@ -8,8 +8,10 @@ const { title, subtitle, description, linkTarget, isLeftText } = Astro.props;
     <p class="text-large">{subtitle}</p>
     <p>
       {description}
-      <div style="margin-top: 1rem;" class="primary-button--outlined">
-        <a href={linkTarget}> Learn more</a>
+      <div class="button-wrapper">
+        <div class="primary-button--outlined">
+          <a href={linkTarget}> Learn more</a>
+        </div>
       </div>
     </p>
   </div>
@@ -18,10 +20,11 @@ const { title, subtitle, description, linkTarget, isLeftText } = Astro.props;
 
 <style lang="scss">
   .feature-card {
-    padding: 64px 64px;
+    padding: 32px 32px;
     display: grid;
     @media screen and (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
+      padding: 64px 64px;
     }
     justify-content: center;
     align-items: center;
@@ -65,6 +68,14 @@ const { title, subtitle, description, linkTarget, isLeftText } = Astro.props;
           order: -1;
         }
       }
+    }
+  }
+  .button-wrapper {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    .primary-button--outlined {
+      margin-top: 1rem;
     }
   }
 </style>
