@@ -3,21 +3,15 @@ import PriceCard from "./PriceCard.astro";
 ---
 
 <div>
-  <h2>Our Prices</h2>
+  <h2 id="prices">Our Prices</h2>
   <p class="subtitle">
     Choose an affordable plan that's packed with features you will love.
   </p>
   <div class="price-cards">
     <PriceCard
       tierName="Basic"
-      price="5"
       description="The basic functionalities to get going with Storygenie."
-      features={[
-        "Create stories",
-        "Share stories",
-        "Export stories",
-        "Basic analytics",
-      ]}
+      features={["Create stories", "Share stories"]}
     />
     <PriceCard
       tierName="Pro"
@@ -26,7 +20,7 @@ import PriceCard from "./PriceCard.astro";
       features={[
         "Everything in Basic",
         "Collaboration features",
-        "Export to your favorite tools",
+        "Export stories",
         "Analyics",
         "Priority support",
       ]}

@@ -6,7 +6,7 @@ const { tierName, price, description, features } = Astro.props;
   <div class="tier-and-price">
     <div class="tier">{tierName}</div>
     <div class="price-and-month">
-      <span class="price">${price}</span>
+      <span class="price">{price ? `$${price}` : "$0"}</span>
       <span class="month">/month</span>
     </div>
     <div class="description">
