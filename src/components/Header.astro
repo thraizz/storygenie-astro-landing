@@ -2,22 +2,30 @@
   <a href="/">
     <h2 class="logo-text">Storygenie</h2>
   </a>
-  <nav>
+  <nav style="margin: 0 16px;">
     <ul class="header__links">
       <div class="header__links-subsites">
         <li>
-          <a href="/features">Features</a>
+          <a href="/#features">Features</a>
         </li>
         <li>
-          <a href="/company">Company</a>
+          <a href="/#prices">Pricing</a>
         </li>
         <li>
-          <a href="/pricing">Pricing</a>
+          <a href="/#faq">FAQ</a>
+        </li>
+        <li>
+          <a href="/#about">About us</a>
         </li>
       </div>
       <div class="header__links-auth">
-        <a class="secondary-button--inverted" href="/login">Login</a>
-        <a class="primary-button" href="/signup">Sign Up</a>
+        <a
+          class="secondary-button--inverted"
+          href="https://app.storygenie.io/login">Login</a
+        >
+        <a class="primary-button" href="https://app.storygenie.io/create"
+          >Sign Up</a
+        >
       </div>
     </ul>
   </nav>
@@ -25,7 +33,14 @@
 <style lang="scss">
   .header {
     display: flex;
+    position: sticky;
+    align-items: baseline;
+    top: 0;
+    z-index: 20;
     justify-content: space-between;
+    // Background is a glass effect white
+    background: rgba(97, 100, 241, 0.2);
+    backdrop-filter: blur(10px);
     &__links {
       display: flex;
       gap: 2rem;
@@ -37,6 +52,12 @@
         gap: 1rem;
         li {
           margin-left: 1rem;
+        }
+      }
+      &-subsites {
+        display: none;
+        @media screen and (min-width: 768px) {
+          display: flex;
         }
       }
     }

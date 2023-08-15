@@ -1,0 +1,81 @@
+<div>
+  <h2 id="about">About us</h2>
+  <div
+    class="company-container col-span-1 flex min-w-[16rem] flex-col items-center justify-center"
+  >
+    <div class="avatar-container">
+      <img
+        class="avatar"
+        src="https://gravatar.com/avatar/5acce0df71a06d1ef4bce164ada29465?s=400"
+        alt=""
+      />
+      <div>
+        <h3>Aron Schüler</h3>
+        <p>Founder</p>
+      </div>
+    </div>
+    <div class="text-container prose col-span-2 text-xl">
+      <p>
+        As a developer, I have a deep understanding of the difficulties and
+        challenges that teams face when working on scrum projects. When ChatGPT
+        was announced, I saw an opportunity to help teams optimize and
+        streamline their work and make the process more efficient and enjoyable.
+      </p>
+      <p>
+        Because every developer, every scrum master, every designer, every
+        product owner knows the struggle with scrum stories. They are cumbersome
+        to write, the product owner does not know what the devs exactly want,
+        the scrum master does not know how it could exactly be implemented and
+        so on. I got tired of this, honestly, and tried my way around templates
+        and workshops to optimize our scrum framework. But this was not too
+        fruitful. We humans are lazy and tend to fall back into old behavior, so
+        after a few good stories we suffered from empty templates and missing
+        acceptance criteria — once again.
+      </p>
+      <p>
+        That’s why I created Storygenie, a tool that uses latest machine
+        learning advancements to help create better stories. My goal is to help
+        teams be more productive, while also making their work more enjoyable,
+        that’s why I strive to provide a solution that is user-friendly,
+        efficient, and cost-effective.
+      </p>
+    </div>
+  </div>
+</div>
+<style lang="scss">
+  .company-container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+    justify-content: center;
+    min-width: 16rem;
+    @media (min-width: 768px) {
+      display: grid;
+    }
+    .avatar-container {
+      height: min-content;
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      .avatar {
+        height: 256px;
+        width: 256px;
+        radius: 128px;
+        object-fit: cover;
+      }
+    }
+    .text-container {
+      grid-column: span 2 / span 2;
+      margin: 0px;
+      font-size: 20px;
+      font-style: normal;
+      line-height: normal;
+      align-self: stretch;
+    }
+  }
+</style>
