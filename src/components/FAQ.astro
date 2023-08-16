@@ -1,24 +1,28 @@
 <div class="faq">
-  <h2 id="faq">FAQ</h2>
-  <div class="question-box">
-    <h3 class="question">What is Storygenie?</h3>
-    <p class="answer">
-      Storygenie is an AI-powered platform designed to optimize and streamline
-      the process of creating scrum user stories, enhancing the productivity and
-      collaboration of agile teams.
-    </p>
+  <div>
+    <h2 id="faq">FAQ</h2>
+    <p class="subtitle">Questions that we get asked regularly.</p>
   </div>
-  <div class="question-box">
-    <h3 class="question">How does Storygenie work?</h3>
-    <p class="answer">
-      Storygenie utilizes cutting-edge machine learning technology, specifically
-      a fine-tuned GPT-4 model, to generate detailed user stories based on
-      provided project context and requirements. These stories can then be
-      edited collaboratively and exported to your issue tracker, saving time and
-      effort for teams.
-    </p>
-  </div>
-  <!-- <div class="question-box">
+  <div class="questions">
+    <div class="question-box">
+      <h3 class="question">What is Storygenie?</h3>
+      <p class="answer">
+        Storygenie is an AI-powered platform designed to optimize and streamline
+        the process of creating scrum user stories, enhancing the productivity
+        and collaboration of agile teams.
+      </p>
+    </div>
+    <div class="question-box">
+      <h3 class="question">How does Storygenie work?</h3>
+      <p class="answer">
+        Storygenie utilizes cutting-edge machine learning technology,
+        specifically a fine-tuned GPT-4 model, to generate detailed user stories
+        based on provided project context and requirements. These stories can
+        then be edited collaboratively and exported to your issue tracker,
+        saving time and effort for teams.
+      </p>
+    </div>
+    <!-- <div class="question-box">
     <h3 class="question">
       What’s the difference between Storygenie and generating stories with
       ChatGPT?
@@ -32,83 +36,91 @@
       ChatGPT in this specific task, even when using GPT-4.
     </p>
   </div> -->
-  <div class="question-box">
-    <h3 class="question">
-      Can I collaborate with my team in real-time on Storygenie?
-    </h3>
-    <p class="answer">
-      Yes! Storygenie offers a live multiplayer editor, allowing team members to
-      collaborate in real-time while writing, brainstorming, and refining user
-      stories together.
-    </p>
-  </div>
-  <div class="question-box">
-    <h3 class="question">
-      Which issue trackers does Storygenie support for exporting stories?
-    </h3>
-    <p class="answer">
-      At the moment, Storygenie supports exporting user stories to Jira. The
-      export of stories to Linear, Trello, Gitlab and Github is currently in
-      progress and will go live later this summer.
-    </p>
-  </div>
-  <div class="question-box">
-    <h3 class="question">
-      Is Storygenie suitable for both small and large teams?
-    </h3>
-    <p class="answer">
-      Absolutely! Storygenie caters to teams of all sizes, whether it's a small
-      startup or a large enterprise. Its flexible features adapt to various team
-      dynamics and needs. For sharing projects and stories across accounts,
-      please contact sales to coordinate the process.
-    </p>
-  </div>
-  <div class="question-box">
-    <h3 class="question">
-      What is the difference between the free and the pro tier?
-    </h3>
-    <p class="answer">
-      The free tier allows you to quickly generate stories for one project. The
-      pro tier goes beyond this and enables the main features like collaborative
-      editing, export of stories and analytics.
-    </p>
-  </div>
-  <div class="question-box">
-    <h3 class="question">
-      Can I try Storygenie before committing to a subscription?
-    </h3>
-    <p class="answer">
-      Yes, Storygenie offers a free trial period where you can explore its
-      features and experience the benefits firsthand. To start the trial, just
-      create an account. It will automatically start the trial period.
-    </p>
+    <div class="question-box">
+      <h3 class="question">
+        Can I collaborate with my team in real-time on Storygenie?
+      </h3>
+      <p class="answer">
+        Yes! Storygenie offers a live multiplayer editor, allowing team members
+        to collaborate in real-time while writing, brainstorming, and refining
+        user stories together.
+      </p>
+    </div>
+    <div class="question-box">
+      <h3 class="question">
+        Which issue trackers does Storygenie support for exporting stories?
+      </h3>
+      <p class="answer">
+        At the moment, Storygenie supports exporting user stories to Jira. The
+        export of stories to Linear, Trello, Gitlab and Github is currently in
+        progress and will go live later this summer.
+      </p>
+    </div>
+    <div class="question-box">
+      <h3 class="question">
+        Is Storygenie suitable for both small and large teams?
+      </h3>
+      <p class="answer">
+        Absolutely! Storygenie caters to teams of all sizes, whether it's a
+        small startup or a large enterprise. Its flexible features adapt to
+        various team dynamics and needs. For sharing projects and stories across
+        accounts, please contact sales to coordinate the process.
+      </p>
+    </div>
+    <div class="question-box">
+      <h3 class="question">
+        What is the difference between the free and the pro tier?
+      </h3>
+      <p class="answer">
+        The free tier allows you to quickly generate stories for one project.
+        The pro tier goes beyond this and enables the main features like
+        collaborative editing, export of stories and analytics.
+      </p>
+    </div>
+    <div class="question-box">
+      <h3 class="question">
+        Can I try Storygenie before committing to a subscription?
+      </h3>
+      <p class="answer">
+        Yes, Storygenie offers a free trial period where you can explore its
+        features and experience the benefits firsthand. To start the trial, just
+        create an account. It will automatically start the trial period.
+      </p>
+    </div>
   </div>
 </div>
 
 <style lang="scss">
   .faq {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    max-width: 800px;
-    .question-box {
+    .subtitle {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+    .questions {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 16px;
-      align-self: stretch;
-      .question {
-        margin: 0;
-        font-size: 32px;
-        font-weight: 700;
-      }
-      .answer {
-        margin: 0;
-        font-size: 20px;
-        font-style: normal;
-        line-height: normal;
+      gap: 4rem;
+      max-width: 800px;
+      .question-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
         align-self: stretch;
+        .question {
+          margin: 0;
+          font-size: 32px;
+          font-weight: 700;
+        }
+        .answer {
+          margin: 0;
+          font-size: 20px;
+          font-style: normal;
+          line-height: normal;
+          align-self: stretch;
+        }
       }
     }
   }
