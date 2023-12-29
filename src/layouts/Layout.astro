@@ -205,6 +205,9 @@ const { title } = Astro.props;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
   }
   .secondary-button {
     display: flex;
@@ -226,6 +229,9 @@ const { title } = Astro.props;
   .secondary-button--inverted {
     a {
       color: #6366f1;
+      @media (prefers-color-scheme: dark) {
+        color: white;
+      }
     }
     border: 1px solid #6366f1;
     transition: background 0.2s ease-in-out;
