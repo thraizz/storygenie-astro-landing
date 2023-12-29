@@ -21,12 +21,6 @@ const { title } = Astro.props;
     <meta name="theme-color" content="#ffffff" />
 
     <script
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="b391843c-33ad-4a3f-ae8a-fef8f19f418c"
-      data-blockingmode="auto"
-      type="text/javascript"></script>
-    <script
       defer=""
       data-cookieconsent="ignore"
       data-domain="storygenie.io"
@@ -34,43 +28,6 @@ const { title } = Astro.props;
       src="/api/wildflower/script.js"
       is:inline
       type="text/javascript"></script>
-
-    <script type="text/javascript">
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof url != "undefined") {
-            window.location = url;
-          }
-        };
-        gtag("event", "conversion", {
-          send_to: "AW-11132042234/kLVjCLa-r58YEPr3lbwp",
-          event_callback: callback,
-        });
-        return false;
-      }
-    </script>
-
-    <script type="text/javascript">
-      !(function (w, d) {
-        if (!w.rdt) {
-          var p = (w.rdt = function () {
-            p.sendEvent
-              ? p.sendEvent.apply(p, arguments)
-              : p.callQueue.push(arguments);
-          });
-          p.callQueue = [];
-          var t = d.createElement("script");
-          (t.src = "https://www.redditstatic.com/ads/pixel.js"), (t.async = !0);
-          var s = d.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(t, s);
-        }
-      })(window, document);
-      rdt("init", "t2_vxnn7slg", {
-        optOut: false,
-        useDecimalCurrencyValues: true,
-      });
-      rdt("track", "PageVisit");
-    </script>
 
     <script
       async=""
@@ -111,185 +68,187 @@ const { title } = Astro.props;
           <a href="/disclaimer">Disclaimer</a>
         </div>
       </div>
-      <p>
-        made with
-        <a href="https://astro.build/" class="underline hover:text-green-400">
-          Astro
-        </a>
-      </p>
     </div>
   </footer>
+</html>
 
-  <style is:global lang="scss">
-    :root {
-      --accent: 136, 58, 234;
-      --accent-light: 224, 204, 250;
-      --accent-dark: 49, 10, 101;
-      --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 30%,
-        white 60%
-      );
-    }
+<style is:global lang="scss">
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background-size: 224px;
+    color: #000;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  // Set background to dark gray when preferring dark color scheme
+  @media (prefers-color-scheme: dark) {
     html {
-      font-family: system-ui, sans-serif;
-      background-size: 224px;
-      color: #000;
+      background-color: #040914;
+      background-image: url("/bg-dark.svg");
+      color: #fff;
     }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  a {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
+  }
+  h2 {
+    color: #f59e0b;
+    font-weight: 600;
+    word-wrap: break-word;
+    text-align: center;
+    margin-top: 0;
+    margin-block-end: 0;
+    padding-top: 64px;
+    font-size: 2rem;
+    @media (min-width: 768px) {
+      font-size: 4rem;
     }
-    code {
-      font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-    }
-    a {
-      color: white;
-      font-weight: 400;
-      text-decoration: none;
-      &:hover {
+  }
+  .text-large {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .primary-button--outlined {
+    border-radius: 4px;
+    border: 1px #f59e0b solid;
+    width: max-content;
+    &:hover {
+      & > * {
         text-decoration: underline;
       }
     }
-    h2 {
+    & > * {
+      padding: 8px 20px;
+      display: block;
+      text-align: center;
       color: #f59e0b;
-      font-weight: 600;
-      word-wrap: break-word;
-      text-align: center;
-      margin-top: 0;
-      margin-block-end: 0;
-      padding-top: 64px;
-      font-size: 2rem;
-      @media (min-width: 768px) {
-        font-size: 4rem;
-      }
     }
-    .text-large {
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .primary-button--outlined {
-      border-radius: 4px;
-      border: 1px #f59e0b solid;
-      width: max-content;
-      &:hover {
-        & > * {
-          text-decoration: underline;
-        }
-      }
-      & > * {
-        padding: 8px 20px;
-        display: block;
-        text-align: center;
-        color: #f59e0b;
-      }
-    }
+  }
 
-    footer {
-      background-color: #1f2937;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.75rem;
-      color: #64748b;
+  footer {
+    background-color: #1f2937;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #64748b;
 
-      .wrapper {
-        margin: 0 auto;
-        max-width: 1500px;
+    .wrapper {
+      margin: 0 auto;
+      max-width: 1500px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .left-box {
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
         align-items: center;
-        .left-box {
+        justify-content: center;
+        .links {
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          .links {
-            display: flex;
-            flex-direction: row;
-            gap: 0.5rem;
-            a {
-              color: #64748b;
-              &:hover {
-                color: white;
-              }
+          flex-direction: row;
+          gap: 0.5rem;
+          a {
+            color: #64748b;
+            &:hover {
+              color: white;
             }
           }
         }
       }
     }
+  }
+  a {
+    text-decoration: none;
+  }
+  .primary-button {
+    &:hover {
+      background: rgb(217 119 6);
+    }
+    transition: background 0.2s ease-in-out;
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #f59e0b;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .secondary-button {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #6366f1;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .secondary-button:hover {
+    background: rgb(100 103 241);
+  }
+  .secondary-button--inverted {
     a {
-      text-decoration: none;
+      color: #6366f1;
     }
-    .primary-button {
-      &:hover {
-        background: rgb(217 119 6);
-      }
-      transition: background 0.2s ease-in-out;
-      display: flex;
-      padding: 8px 20px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 4px;
-      background: #f59e0b;
-      color: #fff;
-      text-align: center;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-    .secondary-button {
-      display: flex;
-      padding: 12px 20px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 4px;
-      background: #6366f1;
-      color: #fff;
-      text-align: center;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-    .secondary-button:hover {
-      background: rgb(100 103 241);
-    }
-    .secondary-button--inverted {
-      a {
-        color: #6366f1;
-      }
-      border: 1px solid #6366f1;
-      transition: background 0.2s ease-in-out;
-      display: flex;
-      padding: 8px 20px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 4px;
-      text-align: center;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
-    }
-  </style>
-</html>
+    border: 1px solid #6366f1;
+    transition: background 0.2s ease-in-out;
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>

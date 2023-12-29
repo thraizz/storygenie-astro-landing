@@ -57,10 +57,20 @@
     @media screen and (min-width: 768px) {
       font-size: 4.5rem;
     }
+    // Dark theme should be gradient from #F5D49A to #f59e0b
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(120deg, #f5d49a 0%, #f59e0b 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
   p {
     text-align: center;
     font-size: 20px;
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
   }
   .storygenie-screenshot {
     filter: drop-shadow(0px 22px 100px #6562e5);
